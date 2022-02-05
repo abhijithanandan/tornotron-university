@@ -1,0 +1,17 @@
+/*
+Theme Name: Tornotron University Theme
+Author: Abhijith Anandan
+Version: 1.0
+*/
+
+.post-listing {
+    border: 2px solid red;
+}
+
+.post-heading {
+    border: 2px solid green;
+}
+
+.post-content {
+    border: 2px solid blue;
+}
