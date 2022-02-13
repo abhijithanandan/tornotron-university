@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tornotron University</title>
+    <title><?php echo get_bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
 <body>
     <header class="site-header">
           <div class="container">
             <h1 class="school-logo-text float-left">
-              <a href="#"><strong>Fictional</strong> University</a>
+              <a href="<?php echo get_site_url(); ?>">
+                <?php 
+                    $title = get_bloginfo('name');
+                    $split_title = preg_split("/( |-|,)/", $title);
+                ?>
+                <strong><?php echo $split_title[0]; ?></strong> <?php echo $split_title[1]; ?>
+              </a>
             </h1>
             <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
             <div class="site-header__menu group">
               <nav class="main-navigation">
                 <ul>
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="/about-us">About Us</a></li>
                   <li><a href="#">Programs</a></li>
                   <li><a href="#">Events</a></li>
                   <li><a href="#">Campuses</a></li>

@@ -9,10 +9,12 @@ function university_files() {
     wp_enqueue_script('main_university_js', get_theme_file_uri('js/index.js'), NULL, '1.0', true);
 }
 
-?> 
-
-<?php
-
 add_action('wp_enqueue_scripts', 'university_files');
+
+function university_features() {
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'university_features');
 
 ?>
