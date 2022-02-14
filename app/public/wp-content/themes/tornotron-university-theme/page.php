@@ -27,15 +27,65 @@ while(have_posts()) {
               </div>
           <?php
           }
-        ?>
+
+          $theParent = wp_get_post_parent_id(get_the_ID());
+
+          if($theParent) {
+            $findChildOf = $theParent;
+          } else {
+            $findChildOf = get_the_ID();
+          }
+
+          $args = array(
+            'child_of' => $findChildOf, 
+            'sort_order' => 'DESC'
+          );
+          
+          $childPages = get_pages($args); 
+
+          if($childPages) {
+
+            ?> 
 
               <div class="page-links">
-                <h2 class="page-links__title"><a href="/about-us">About Us</a></h2>
+                <h2 class="page-links__title"><a href="<?php echo get_the_permalink($findChildOf); ?>"><?php echo get_the_title($findChildOf); ?></a></h2>
                 <ul class="min-list">
-                  <li class="current_page_item"><a href="/our-history">Our History</a></li>
-                  <li><a href="/our-goals">Our Goals</a></li>
+                  <?php 
+                      foreach($childPages as $key => $childPage) {
+                        try {
+                          //7.3 and later
+                          if($key === array_key_first($childPages)) {
+                            ?> 
+                              <li class="current_page_item"><a href="/our-history"><?php echo get_the_title($childPage->ID); ?></a></li>
+                             <?php
+                          } else {
+                          ?> 
+                            <li><a href="/our-goals"><?php echo get_the_title($childPage->ID); ?></a></li>
+                          <?php
+                          }
+                        } catch (\Throwable $th) {
+                            if(WP_DEBUG === true) {
+                              error_log($th->getMessage()); 
+                            }
+                          //php 7.2 older
+                          reset($childPages);
+                          if($key === key($childPages)){
+                            ?> 
+                              <li class="current_page_item"><a href="/our-history"><?php echo get_the_title($childPage->ID); ?></a></li>
+                             <?php
+                          }
+                          ?> 
+                           <li><a href="/our-goals"><?php echo get_the_title($childPage->ID); ?></a></li>
+                          <?php
+                        }
+
+                      }
+                  ?>
                 </ul>
               </div>
+            <?php
+          }
+          ?>
 
               <div class="generic-content">
               <p><?php the_content(); ?></p>
