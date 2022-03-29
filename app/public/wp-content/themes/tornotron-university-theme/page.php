@@ -24,7 +24,7 @@ while(have_posts()) {
           ?> 
               <div class="metabox metabox--position-up metabox--with-home-link">
                 <p>
-                  <a class="metabox__blog-home-link" href="/about-us"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title(wp_get_post_parent_id(get_the_ID())); ?></a> <span class="metabox__main"><?php echo get_the_title(); ?></span>
+                  <a class="metabox__blog-home-link" href="<?php echo get_the_permalink($theParent); ?>"> <i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title(wp_get_post_parent_id(get_the_ID())); ?></a> <span class="metabox__main"><?php echo get_the_title(); ?></span>
                 </p>
               </div>
           <?php
@@ -58,11 +58,11 @@ while(have_posts()) {
                           //7.3 and later
                           if($key === array_key_first($childPages)) {
                             ?> 
-                              <li class="current_page_item"><a href="/our-history"><?php echo get_the_title($childPage->ID); ?></a></li>
+                              <li class="current_page_item"><a href="<?php echo get_the_permalink($childPage->ID); ?>"><?php echo get_the_title($childPage->ID); ?></a></li>
                              <?php
                           } else {
                           ?> 
-                            <li><a href="/our-goals"><?php echo get_the_title($childPage->ID); ?></a></li>
+                            <li><a href="<?php echo get_the_permalink($childPage->ID); ?>"><?php echo get_the_title($childPage->ID); ?></a></li>
                           <?php
                           }
                         } catch (\Throwable $th) {
@@ -73,11 +73,11 @@ while(have_posts()) {
                           reset($childPages);
                           if($key === key($childPages)){
                             ?> 
-                              <li class="current_page_item"><a href="/our-history"><?php echo get_the_title($childPage->ID); ?></a></li>
+                              <li class="current_page_item"><a href="<?php echo get_the_permalink($childPage->ID); ?>"><?php echo get_the_title($childPage->ID); ?></a></li>
                              <?php
                           }
                           ?> 
-                           <li><a href="/our-goals"><?php echo get_the_title($childPage->ID); ?></a></li>
+                           <li><a href="<?php echo get_the_permalink($childPage->ID); ?>"><?php echo get_the_title($childPage->ID); ?></a></li>
                           <?php
                         }
 
