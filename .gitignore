@@ -22,6 +22,7 @@ xmlrpc.php
 
 #Configuration
 app/public/wp-config.php
+app/public/.vscode
 
 
 #Log Files

@@ -1,0 +1,122 @@
+[27-Mar-2022 16:20:57 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php on line 1753
+[27-Mar-2022 16:20:57 UTC] PHP Stack trace:
+[27-Mar-2022 16:20:57 UTC] PHP   1. {main}() /opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[27-Mar-2022 16:20:57 UTC] PHP   2. include() /opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[27-Mar-2022 16:20:57 UTC] PHP   3. include() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[27-Mar-2022 16:20:57 UTC] PHP   4. WP_CLI\bootstrap() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[27-Mar-2022 16:20:57 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:77
+[27-Mar-2022 16:20:57 UTC] PHP   6. WP_CLI\Runner->start() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:23
+[27-Mar-2022 16:20:57 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1192
+[27-Mar-2022 16:20:57 UTC] PHP   8. require() phar:///opt/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1271
+[27-Mar-2022 16:20:57 UTC] PHP   9. require_wp_db() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-settings.php:124
+[27-Mar-2022 16:20:57 UTC] PHP  10. wpdb->__construct() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/load.php:561
+[27-Mar-2022 16:20:57 UTC] PHP  11. wpdb->db_connect() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php:724
+[27-Mar-2022 16:20:57 UTC] PHP  12. mysqli_real_connect() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php:1753
+[27-Mar-2022 16:20:58 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php on line 1753
+[27-Mar-2022 16:20:58 UTC] PHP Stack trace:
+[27-Mar-2022 16:20:58 UTC] PHP   1. {main}() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/index.php:0
+[27-Mar-2022 16:20:58 UTC] PHP   2. require() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/index.php:17
+[27-Mar-2022 16:20:58 UTC] PHP   3. require_once() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-blog-header.php:13
+[27-Mar-2022 16:20:58 UTC] PHP   4. require_once() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-load.php:50
+[27-Mar-2022 16:20:58 UTC] PHP   5. require_once() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-config.php:87
+[27-Mar-2022 16:20:58 UTC] PHP   6. require_wp_db() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-settings.php:124
+[27-Mar-2022 16:20:58 UTC] PHP   7. wpdb->__construct() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/load.php:561
+[27-Mar-2022 16:20:58 UTC] PHP   8. wpdb->db_connect() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php:724
+[27-Mar-2022 16:20:58 UTC] PHP   9. mysqli_real_connect() /home/abhijith/Dev/Local Sites/tornotron-university/app/public/wp-includes/wp-db.php:1753
+[27-Mar-2022 16:23:28 UTC] Test Error Message
+[27-Mar-2022 16:34:13 UTC] array (
+  0 => 
+  WP_Post::__set_state(array(
+     'ID' => 22,
+     'post_author' => '1',
+     'post_date' => '2022-02-12 17:16:32',
+     'post_date_gmt' => '2022-02-12 17:16:32',
+     'post_content' => '<!-- wp:paragraph -->
+<p>This page is about our history. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens utebare non numquam. Bestiarum vero nullum iudicium puto. Duo Reges: constructio interrete. In schola desinis.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Praeclare hoc quidem. Nihil enim hoc differt. Quare attende, quaeso. Si id dicis, vicimus. Quo modo?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Haec quo modo conveniant, non sane intellego. Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Nihil opus est exemplis hoc facere longius. Ut in geometria, prima si dederis, danda sunt omnia. Equidem e Cn. Haeret in salebra. Quis non odit sordidos, vanos, leves, futtiles?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Quid est igitur, inquit, quod requiras? Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Graece donan, Latine voluptatem vocant. Ergo ita: non posse honeste vivi, nisi honeste vivatur?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Confecta res esset. Certe, nisi voluptatem tanti aestimaretis. Respondeat totidem verbis.</p>
+<!-- /wp:paragraph -->',
+     'post_title' => 'Our History',
+     'post_excerpt' => '',
+     'post_status' => 'publish',
+     'comment_status' => 'closed',
+     'ping_status' => 'closed',
+     'post_password' => '',
+     'post_name' => 'our-history',
+     'to_ping' => '',
+     'pinged' => '',
+     'post_modified' => '2022-02-12 17:16:32',
+     'post_modified_gmt' => '2022-02-12 17:16:32',
+     'post_content_filtered' => '',
+     'post_parent' => 14,
+     'guid' => 'http://tornotron-university.local/?page_id=22',
+     'menu_order' => 0,
+     'post_type' => 'page',
+     'post_mime_type' => '',
+     'comment_count' => '0',
+     'filter' => 'raw',
+  )),
+  1 => 
+  WP_Post::__set_state(array(
+     'ID' => 24,
+     'post_author' => '1',
+     'post_date' => '2022-02-12 17:17:04',
+     'post_date_gmt' => '2022-02-12 17:17:04',
+     'post_content' => '<!-- wp:paragraph -->
+<p>This page describes our goals. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens utebare non numquam. Bestiarum vero nullum iudicium puto. Duo Reges: constructio interrete. In schola desinis.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Praeclare hoc quidem. Nihil enim hoc differt. Quare attende, quaeso. Si id dicis, vicimus. Quo modo?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Haec quo modo conveniant, non sane intellego. Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Nihil opus est exemplis hoc facere longius. Ut in geometria, prima si dederis, danda sunt omnia. Equidem e Cn. Haeret in salebra. Quis non odit sordidos, vanos, leves, futtiles?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Quid est igitur, inquit, quod requiras? Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Graece donan, Latine voluptatem vocant. Ergo ita: non posse honeste vivi, nisi honeste vivatur?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Confecta res esset. Certe, nisi voluptatem tanti aestimaretis. Respondeat totidem verbis.</p>
+<!-- /wp:paragraph -->',
+     'post_title' => 'Our Goals',
+     'post_excerpt' => '',
+     'post_status' => 'publish',
+     'comment_status' => 'closed',
+     'ping_status' => 'closed',
+     'post_password' => '',
+     'post_name' => 'our-goals',
+     'to_ping' => '',
+     'pinged' => '',
+     'post_modified' => '2022-02-12 17:18:04',
+     'post_modified_gmt' => '2022-02-12 17:18:04',
+     'post_content_filtered' => '',
+     'post_parent' => 14,
+     'guid' => 'http://tornotron-university.local/?page_id=24',
+     'menu_order' => 1,
+     'post_type' => 'page',
+     'post_mime_type' => '',
+     'comment_count' => '0',
+     'filter' => 'raw',
+  )),
+)
