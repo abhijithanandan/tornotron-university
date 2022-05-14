@@ -1,4 +1,3 @@
-<!-- Header.php -->
 <?php
 
     get_header();
