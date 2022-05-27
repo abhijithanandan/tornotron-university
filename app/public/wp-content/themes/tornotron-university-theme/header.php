@@ -23,10 +23,15 @@
             <div class="site-header__menu group">
               <nav class="main-navigation">
                 <?php 
-                  wp_nav_menu(array(
-                      'theme_location' => 'headerMenuLocation'
-                  ));
+                  // wp_nav_menu(array(
+                  //     'theme_location' => 'headerMenuLocation'
+                  // ));
                 ?> 
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Campuses</a></li>
+                <li <?php if(get_post_type() == 'post') { echo 'class="current-menu-item"'; } ?> ><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
               </nav>
               <div class="site-header__util">
                 <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
